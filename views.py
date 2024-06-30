@@ -8,4 +8,8 @@ def index(request):
 
 def oferton(request):
     context={}
-    return render(request, "speedwagon/oferton.html", context)
+    return render(request, "speedwagon/oferton", context)
+
+def peluches(request):
+    context={}
+    return render(request, "speedwagon/peluches", context)
