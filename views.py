@@ -13,3 +13,27 @@ def oferton(request):
 def peluches(request):
     context={}
     return render(request, "speedwagon/peluches.html", context)
+
+def catalogo(request):
+    context={}
+    return render(request, "speedwagon/catalogo.html", context)
+
+def cata2(request):
+    context={}
+    return render(request, "speedwagon/cata2.html", context)
+
+def registro(request):
+    context={}
+    return render(request, "speedwagon/registro.html", context)
+
+def ropa(request):
+    context={}
+    return render(request, "speedwagon/ropa.html", context)
+
+def seinen(request):
+    context={}
+    return render(request, "speedwagon/seinen.html", context)
+
+def shonen(request):
+    context={}
+    return render(request, "speedwagon/shonen.html", context)

@@ -9,8 +9,7 @@
   <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
   <link rel="stylesheet" href="{% static 'css/estilo.css'%}">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-  <script src="funciones.js" type=""></script>
-
+  <script src="{% static 'js/funciones.js' %}" type=""></script>
 </head>
 
 <body>
@@ -28,7 +27,7 @@
     <nav class="navbar navbar-expand-lg bg-body-dark">
       <div class="container-fluid">
         <a class="navbar-brand" href="#">
-          <img src="imagenes/jojologo.png" alt="" width="120" height="60">
+          <img src="{% static 'imagenes/jojologo.png'%}" alt="" width="120" height="60">
         </a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
           aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -43,7 +42,7 @@
 
             </li>
             <li class="nav-item">
-              <a id="of" class="nav-link active" aria-current="page" href="oferton.html">Ofertones</a>
+              <a id="of" class="nav-link active" aria-current="page" href="{% url 'oferton'%}">Ofertones</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="#"></a>
@@ -84,7 +83,7 @@
               </a>
               <ul class="dropdown-menu">
                 <li><a class="dropdown-item" href="ropa.html">Ropa</a></li>
-                <li><a class="dropdown-item" href="speedwagon/peluches.html">Peluches chikitos</a></li>
+                <li><a class="dropdown-item" href="{% url 'peluches' %}">Peluches chikitos</a></li>
               </ul>
             </li>
 
@@ -183,7 +182,7 @@
               <section class="producto">
                 <div class="col">
                   <div id="cardRei" class="card" style="width: 18rem;">
-                    <img class="card-img-top" src="imagenes/chikita.png" alt="Card image cap">
+                    <img class="card-img-top" src="{% static 'imagenes/chikita.png'%}" alt="Card image cap">
                     <div class="card-body">
                       <h5 class="card-title">Peluche Rei Chikita </h5>
                       <p class="card-text">$15.000</p>
@@ -218,7 +217,7 @@
       <div class="carousel-inner">
         <div class="carousel-item active">
           <div class="d-flex justify-content-center">
-            <img src="imagenes/collage1.jpg" class="d-block w-100" alt="...">
+            <img src="{% static 'imagenes/collage1.jpg'%}" class="d-block w-100" alt="...">
           </div>
           <div class="carousel-caption d-none d-md-block">
 
@@ -226,7 +225,7 @@
         </div>
         <div class="carousel-item">
           <div class="d-flex justify-content-center">
-            <img src="imagenes/foto1.jpg" class="d-block w-100" alt="...">
+            <img src="{% static 'imagenes/foto1.jpg'%}" class="d-block w-100" alt="...">
           </div>
           <div class="carousel-caption d-none d-md-block">
 
@@ -234,7 +233,7 @@
         </div>
         <div class="carousel-item">
           <div class="d-flex justify-content-center">
-            <img src="imagenes/collage2.jpg" class="d-block w-100" alt="...">
+            <img src="{% static 'imagenes/collage2.jpg'%}" class="d-block w-100" alt="...">
           </div>
           <div class="carousel-caption d-none d-md-block">
 
@@ -278,7 +277,7 @@
     integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy"
     crossorigin="anonymous"></script>
 
-  <script src="../js/bootstrap.bundle.min.js"></script>
+  <script src="{% static "js/bootstrap.bundle.min.js"%}"></script> 
 
 </body>
 
