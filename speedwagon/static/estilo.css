@@ -1,0 +1,49 @@
+body{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    background-color: #9DF9FF;
+    background-image: url(https://img.freepik.com/foto-gratis/fondo-papel-tapiz-colorido-borroso-artistico_58702-8200.jpg?size=626&ext=jpg&ga=GA1.1.539837299.1712188800&semt=ais);
+    background-size: cover;
+    
+}
+nav{
+    
+    background-color: black;
+    height: 120px;
+    
+}
+
+#bus,
+#ca,
+#of,
+#cp {
+    color: white;
+}
+
+#carouselExampleCaptions{
+    margin-top: 5%;
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+
+#card1{
+    margin-top: 5%;
+    margin-bottom: 40%;
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+#cardRei{
+    padding: 50px;
+    margin-top: 20%;
+}
+
+#carro{
+    margin-bottom: 25px;
+    margin-left: 25px;
+}
+
+
+.container-fluid{
+    padding: 50px;
+}
