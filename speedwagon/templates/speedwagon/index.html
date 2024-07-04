@@ -28,7 +28,7 @@
     <nav class="navbar navbar-expand-lg bg-body-dark">
       <div class="container-fluid">
         <a class="navbar-brand" href="#">
-          <img src="imagenes/jojologo.png" alt="" width="120" height="60">
+          <img src="{% static 'imagenes/jojologo.png' %}" alt="" width="120" height="60">
         </a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
           aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -43,7 +43,7 @@
 
             </li>
             <li class="nav-item">
-              <a id="of" class="nav-link active" aria-current="page" href="oferton.html">Ofertones</a>
+              <a id="of" class="nav-link active" aria-current="page" href="{% url 'oferton' %}">Ofertones</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="#"></a>
@@ -54,8 +54,8 @@
                 Figuras
               </a>
               <ul class="dropdown-menu">
-                <li><a class="dropdown-item" href="Cata2.html">Bandai</a></li>
-                <li><a class="dropdown-item" href="Catalogo.html">Figuras a escala</a></li>
+                <li><a class="dropdown-item" href="{% url 'cata2' %}">Bandai</a></li>
+                <li><a class="dropdown-item" href="{% url 'catalogo' %}">Figuras a escala</a></li>
               </ul>
             </li>
 
@@ -69,8 +69,8 @@
                 Mangas
               </a>
               <ul class="dropdown-menu">
-                <li><a class="dropdown-item" href="shonen.html">Shonen</a></li>
-                <li><a class="dropdown-item" href="seinen.html">Seinen</a></li>
+                <li><a class="dropdown-item" href="{% url 'shonen' %}">Shonen</a></li>
+                <li><a class="dropdown-item" href="{% url 'seinen' %}">Seinen</a></li>
               </ul>
             </li>
 
@@ -83,8 +83,8 @@
                 Merch
               </a>
               <ul class="dropdown-menu">
-                <li><a class="dropdown-item" href="ropa.html">Ropa</a></li>
-                <li><a class="dropdown-item" href="peluches.html">Peluches chikitos</a></li>
+                <li><a class="dropdown-item" href="{% url 'ropa' %}">Ropa</a></li>
+                <li><a class="dropdown-item" href="{% url 'peluches' %}">Peluches chikitos</a></li>
               </ul>
             </li>
 
@@ -145,7 +145,7 @@
 
                         <div class="container  text-center" style="background-color:#ffffff">
                           <span class="psw" style="color: black;"><a style="text-decoration: none; color: black;"
-                              href="registro.html">¿No tienes cuenta? 
+                              href="{% url 'registro' %}">¿No tienes cuenta? 
                               Registrate aqui</a></span>
                         </div>
 
@@ -218,7 +218,7 @@
       <div class="carousel-inner">
         <div class="carousel-item active">
           <div class="d-flex justify-content-center">
-            <img src="imagenes/collage1.jpg" class="d-block w-100" alt="...">
+            <img src="{% static 'imagenes/collage1.jpg'%}" class="d-block w-100" alt="...">
           </div>
           <div class="carousel-caption d-none d-md-block">
 
@@ -226,7 +226,7 @@
         </div>
         <div class="carousel-item">
           <div class="d-flex justify-content-center">
-            <img src="imagenes/foto1.jpg" class="d-block w-100" alt="...">
+            <img src="{% static 'imagenes/foto1.jpg'%}" class="d-block w-100" alt="...">
           </div>
           <div class="carousel-caption d-none d-md-block">
 
@@ -234,7 +234,7 @@
         </div>
         <div class="carousel-item">
           <div class="d-flex justify-content-center">
-            <img src="imagenes/collage2.jpg" class="d-block w-100" alt="...">
+            <img src="{% static 'imagenes/collage2.jpg'%}" class="d-block w-100" alt="...">
           </div>
           <div class="carousel-caption d-none d-md-block">
 
