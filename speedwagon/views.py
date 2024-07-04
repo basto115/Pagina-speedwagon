@@ -1,4 +1,5 @@
 from django.shortcuts import render
+from .models import Usuario
 
 # Create your views here.
 
@@ -37,3 +38,12 @@ def seinen(request):
 def shonen(request):
     context={}
     return render(request, "speedwagon/shonen.html", context)
+
+def crud(request):
+    usuario = Usuario.objects.all()
+    context = {
+        "usuario": Usuario,
+    }
+    return render(request, "speedwagon/crud.html", context)
+
+

@@ -11,5 +11,6 @@ urlpatterns = [
     path("registro", views.registro, name="registro"),
     path("ropa", views.ropa, name="ropa"),
     path("seinen", views.seinen, name="seinen"),
-    path("shonen", views.shonen, name="shonen")
+    path("shonen", views.shonen, name="shonen"),
+    path("crud", views.crud, name="crud")
 ]
