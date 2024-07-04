@@ -17,8 +17,8 @@
     <!--NavBar-->
     <nav class="navbar navbar-expand-lg bg-body-dark">
         <div class="container-fluid">
-          <a class="navbar-brand" href="index.html">
-            <img src="imagenes/jojologo.png" alt="" width="120" height="60">
+          <a class="navbar-brand" href="{% url 'index' %}">
+            <img src="{% static 'imagenes/jojologo.png' %}" alt="" width="120" height="60">
           </a>
           <button class="navbar-toggler" 
           type="button" 
@@ -35,7 +35,7 @@
                 
               </li>
               <li class="nav-item">
-                <a id="of" class="nav-link active" aria-current="page" href="oferton.html">Ofertones</a>
+                <a id="of" class="nav-link active" aria-current="page" href="{% url 'oferton' %}">Ofertones</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="#"></a>
@@ -50,8 +50,8 @@
                   Figuras
                 </a>
                 <ul class="dropdown-menu">
-                  <li><a class="dropdown-item" href="Cata2.html">Bandai</a></li>
-                  <li><a class="dropdown-item" href="Catalogo.html">Figuras a escala</a></li>
+                  <li><a class="dropdown-item" href="{% url 'cata2' %}">Bandai</a></li>
+                  <li><a class="dropdown-item" href="{% url 'catalogo' %}">Figuras a escala</a></li>
                 </ul>
               </li>
               
@@ -69,8 +69,8 @@
                   Mangas
                 </a>
                 <ul class="dropdown-menu">
-                  <li><a class="dropdown-item" href="shonen.html">Shonen</a></li>
-                  <li><a class="dropdown-item" href="seinen.html">Seinen</a></li>
+                  <li><a class="dropdown-item" href="{% url 'shonen' %}">Shonen</a></li>
+                  <li><a class="dropdown-item" href="{% url 'seinen' %}">Seinen</a></li>
                 </ul>
               </li>
 
@@ -87,8 +87,8 @@
                   Merch
                 </a>
                 <ul class="dropdown-menu">
-                  <li><a class="dropdown-item" href="ropa.html">Ropa</a></li>
-                  <li><a class="dropdown-item" href="peluches.html">Peluches chikitos</a></li>
+                  <li><a class="dropdown-item" href="{% url 'ropa' %}">Ropa</a></li>
+                  <li><a class="dropdown-item" href="{% url 'peluches' %}">Peluches chikitos</a></li>
                 </ul>
               </li>
 
@@ -120,7 +120,7 @@
               <section class="producto">
                 <div class="col" >
                   <div id="cardRei" class="card" style="width: 18rem;">
-                    <img class="card-img-top" src="imagenes/chikita.png" alt="Card image cap">
+                    <img class="card-img-top" src="{% static 'imagenes/chikita.png' %}" alt="Card image cap">
                     <div class="card-body">
                       <h5 class="card-title">Peluche Rei Chikita </h5>
                       <p class="card-text">$15.000</p>
@@ -145,7 +145,7 @@
           <div class="row row-cols-12">
             <div class="col" >
               <div id="card1" class="card" style="width: 18rem;" >
-                <img class="card-img-top" src="imagenes/jojomanga.png" alt="Card image cap" height="400">
+                <img class="card-img-top" src="{% static 'imagenes/jojomanga.png' %}" alt="Card image cap" height="400">
                 <div class="card-body">
                   <h5 class="card-title">Tomo 10 Jojolion </h5>
                   <p class="card-text">$12.000</p>
@@ -155,7 +155,7 @@
             </div>
             <div class="col" >
               <div id="card1" class="card" style="width: 18rem;">
-                <img class="card-img-top" src="imagenes/vagabond.jpg" alt="Card image cap" height="400">
+                <img class="card-img-top" src="{% static 'imagenes/vagabond.jpg' %}" alt="Card image cap" height="400">
                 <div class="card-body">
                   <h5 class="card-title">Tomo 30 Vagabond </h5>
                   <p class="card-text">$12.000</p>
@@ -165,7 +165,7 @@
             </div>
             <div class="col">
               <div id="card1" class="card" style="width: 18rem;">
-                <img class="card-img-top" src="imagenes/tomoberserk.jpg" alt="Card image cap" height="400">
+                <img class="card-img-top" src="{% static 'imagenes/tomoberserk.jpg' %}" alt="Card image cap" height="400">
                 <div class="card-body">
                   <h5 class="card-title">Tomo 3 Berserk Edicion Deluxe</h5>
                   <p class="card-text">$50.000</p>
