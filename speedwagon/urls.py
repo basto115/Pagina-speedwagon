@@ -13,7 +13,8 @@ urlpatterns = [
     path("seinen", views.seinen, name="seinen"),
     path("shonen", views.shonen, name="shonen"),
     path("crud", views.crud, name="crud"),
+    path("carrito", views.carrito, name="carrito"),
     path("usuarioAdd", views.usuarioAdd, name="usuarioAdd"),
-    path("usuarioUpdate", views.usuarioUpdate, name="usuarioUpdate" ),
+    path("usuarioUpdate", views.usuarioUpdate, name="usuarioUpdate" )
     
 ]

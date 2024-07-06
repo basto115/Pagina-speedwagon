@@ -46,6 +46,11 @@ def crud(request):
     }
     return render(request, "speedwagon/crud.html", context)
 
+def carrito(request):
+    context={}
+    return render(request, "speedwagon/carrito.html", context)
+
+
 def usuarioAdd(request):
     if request == "POST":
         nombre = request.POST["nombre"]
@@ -74,6 +79,7 @@ def usuarioUpdate(request):
     nombre = request.POST["nombre"]
     apellido = request.POST["apellido"]
     email = request.POST["email"]
+
     
     password = request.POST["password"]
     
