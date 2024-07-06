@@ -46,4 +46,8 @@ def crud(request):
     }
     return render(request, "speedwagon/crud.html", context)
 
+def carrito(request):
+    context={}
+    return render(request, "speedwagon/carrito.html", context)
+
 
