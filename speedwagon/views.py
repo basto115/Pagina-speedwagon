@@ -40,9 +40,9 @@ def shonen(request):
     return render(request, "speedwagon/shonen.html", context)
 
 def crud(request):
-    usuarios = Usuario.objects.all()
+    Usuarios = Usuario.objects.all()
     context ={
-        "Usuarios": Usuario,
+        "Usuarios": Usuarios,
     }
     return render(request, "speedwagon/crud.html", context)
 
@@ -79,9 +79,7 @@ def usuarioUpdate(request):
         nombre = request.POST["nombre"]
         apellido = request.POST["apellido"]
         email = request.POST["email"]
-
-    
-    password = request.POST["password"]
+        password = request.POST["password"]
     
     obj = Usuario(
         nombre = nombre,
@@ -91,3 +89,47 @@ def usuarioUpdate(request):
         password = password
     )
     obj.save()
+
+def user_del(request, pk):
+    try:
+        usuario = Usuario.objects.get(user=pk)
+        usuario.delete()
+
+        usuarios = Usuario.objects.all()
+        context = {
+            "mensaje": "Registro Eliminado",
+            "usuarios": usuarios,
+        }
+        return render(request, "speedwagon/crud.html", context)
+    except:
+        usuarios = Usuario.objects.all()
+        context = {
+            "mensaje": "Error, usuario no encontrado...",
+            "usuarios": usuarios,
+        }
+        return render(request, "speedwagon/crud.html", context)
+
+def user_findEdit(request,pk):
+    if pk!="":
+        """ 
+            objects.get() = Obtener datos con filtro
+            objects.all() = Obtener todos
+        """
+        usuario = Usuario.objects.get(user=pk)
+        
+
+        context={
+            "usuario":usuario,
+            
+        }
+        return render(request,"speedwagon/usuarioUpdate.html",context)
+    else:
+        usuarios = Usuario.objects.all()
+        context={
+            "mensaje":"Error,usuario no encontrado",
+            "usuarios":usuarios
+        }
+        return render(request,"speedwagon/crud.html",context)
+
+
+
