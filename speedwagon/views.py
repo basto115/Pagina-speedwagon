@@ -40,13 +40,29 @@ def shonen(request):
     return render(request, "speedwagon/shonen.html", context)
 
 def crud(request):
-    usuario = Usuario.objects.all()
-    context = {
-        "usuario": Usuario,
+    usuarios = Usuario.objects.all()
+    context ={
+        "Usuarios": Usuario,
     }
     return render(request, "speedwagon/crud.html", context)
 
 def usuarioAdd(request):
-    if request.method is not "POST":
-        context={}
-        return render(request, "speedwagon/crud.html", context)
+    nombre = request.POST["nombre"]
+    apellido = request.POST["apellido"]
+    email = request.POST["email"]
+    user = request.POST["user"]
+    password = request.POST["password"]
+    
+    obj = Usuario.objects.create(
+        nombre = nombre,
+        apellido = apellido,
+        email = email,
+        user = user,
+        password = password
+    )
+    obj.save()
+    context = {
+        "mensaje": "Registro exitoso",
+    }
+    return render(request, "speedwagon/usuarioAdd.html", context)
+        
