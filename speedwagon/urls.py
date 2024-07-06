@@ -15,6 +15,8 @@ urlpatterns = [
     path("crud", views.crud, name="crud"),
     path("carrito", views.carrito, name="carrito"),
     path("usuarioAdd", views.usuarioAdd, name="usuarioAdd"),
-    path("usuarioUpdate", views.usuarioUpdate, name="usuarioUpdate" )
+    path("usuarioUpdate", views.usuarioUpdate, name="usuarioUpdate" ),
+    path("user_del/<str:pk>", views.user_del, name="user_del"),
+    path("user_findEdit/<str:pk>", views.user_findEdit, name="user_findEdit"),
     
 ]
