@@ -46,4 +46,7 @@ def crud(request):
     }
     return render(request, "speedwagon/crud.html", context)
 
-
+def usuarioAdd(request):
+    if request.method is not "POST":
+        context={}
+        return render(request, "speedwagon/crud.html", context)
