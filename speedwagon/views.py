@@ -47,13 +47,15 @@ def crud(request):
     return render(request, "speedwagon/crud.html", context)
 
 def usuarioAdd(request):
-    nombre = request.POST["nombre"]
-    apellido = request.POST["apellido"]
-    email = request.POST["email"]
-    user = request.POST["user"]
-    password = request.POST["password"]
-    
+    if request == "POST":
+        nombre = request.POST["nombre"]
+        apellido = request.POST["apellido"]
+        email = request.POST["email"]
+        user = request.POST["user"]
+        password = request.POST["password"]
+        
     obj = Usuario.objects.create(
+        
         nombre = nombre,
         apellido = apellido,
         email = email,
@@ -67,4 +69,19 @@ def usuarioAdd(request):
     return render(request, "speedwagon/usuarioAdd.html", context)
         
 def usuarioUpdate(request):
+    if request.method=="POST":
+        user = request.POST["user"]
+    nombre = request.POST["nombre"]
+    apellido = request.POST["apellido"]
+    email = request.POST["email"]
     
+    password = request.POST["password"]
+    
+    obj = Usuario(
+        nombre = nombre,
+        apellido = apellido,
+        email = email,
+        user = user,
+        password = password
+    )
+    obj.save()
