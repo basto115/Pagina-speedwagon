@@ -76,9 +76,9 @@ def usuarioAdd(request):
 def usuarioUpdate(request):
     if request.method=="POST":
         user = request.POST["user"]
-    nombre = request.POST["nombre"]
-    apellido = request.POST["apellido"]
-    email = request.POST["email"]
+        nombre = request.POST["nombre"]
+        apellido = request.POST["apellido"]
+        email = request.POST["email"]
 
     
     password = request.POST["password"]
