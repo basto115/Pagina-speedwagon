@@ -66,3 +66,5 @@ def usuarioAdd(request):
     }
     return render(request, "speedwagon/usuarioAdd.html", context)
         
+def usuarioUpdate(request):
+    

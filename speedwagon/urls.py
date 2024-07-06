@@ -14,5 +14,6 @@ urlpatterns = [
     path("shonen", views.shonen, name="shonen"),
     path("crud", views.crud, name="crud"),
     path("usuarioAdd", views.usuarioAdd, name="usuarioAdd"),
+    path("usuarioUpdate", views.usuarioUpdate, name="usuarioUpdate" ),
     
 ]
