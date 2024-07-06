@@ -1,0 +1,58 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>añadir</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/estilo.css'%}" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="{% static 'js/funRegi.js' %}"></script>
+</head>
+<body>
+
+  <main>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8 shadow-lg mx-auto text-center p-3">
+                <h2 class="my-3">Registro de usuario</h2>
+                <form action="{% url 'usuarioAdd' %}" method="POST" class="form-floating">
+                    {% csrf_token %}
+                    <div class="form-floating mb-3 w-25 mx-auto">
+                        <input type="text" class="form-control" id="nombre" name="nombre">
+                        <label for="nombre" class="form-label">Nombre</label>
+                    </div>
+                    <div class="form-floating mb-3 w-25 mx-auto">
+                        <input type="text" class="form-control" id="apellido" name="apellido">
+                        <label for="apellido" class="form-label">Apellido</label>
+                    </div>
+                    <div class="form-floating mb-3 w-25 mx-auto">
+                        <input type="text" class="form-control" id="email" name="email">
+                        <label for="email" class="form-label">Email</label>
+                    </div>
+                    <div class="form-floating mb-3 w-25 mx-auto">
+                        <input type="text" class="form-control" id="User" name="User">
+                        <label for="User" class="form-label">User</label>
+                    </div>
+                    <div class="form-floating mb-3 w-25 mx-auto">
+                        <input type="text" class="form-control" id="Password" name="Password">
+                        <label for="Password" class="form-label">Password</label>
+                    </div>
+                    {% if mensaje %}
+                    <div class="alert alert-success w-50 mx-auto">
+                        {{mensaje}}
+                    {% endif %}
+                    <div>
+                        <button type="submit" class="btn btn-success">agregar registro</button><br>
+                        <a href="{% url 'crud'%}"><button type="button" class="btn btn-primary mt-3">volver</button></a>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+  </main>
+    
+  <script src="{% static '../js/bootstrap.bundle.min.js'%}"></script>
+</body>
+
+</html>
